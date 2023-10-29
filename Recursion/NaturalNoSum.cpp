@@ -16,6 +16,9 @@ int sum(int n)
 
 int main()
 {
-    cout<<sum(10);
+    int n;
+    cout<<"Enter Number:- ";
+    cin>>n;
+    cout<<sum(n);
     return 0;
 }
