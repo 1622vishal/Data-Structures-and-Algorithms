@@ -13,6 +13,7 @@ Stay in touch!!! 🤗
 
 ## Looking For Something Specific 🤔
 Learned DSA in this order ⬇  
+[Time Complexity](https://www.geeksforgeeks.org/understanding-time-complexity-simple-examples/)
  
 ## 🔗 Links
 
