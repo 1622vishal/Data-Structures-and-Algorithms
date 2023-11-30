@@ -1,7 +1,7 @@
 /*----Written by :- Vishal Yadav----*/
 /*----Date :- 30-11-23----*/
 
-/*Program to search for a element in a Linked List*/
+/*Program to delete first element in a Linked List*/
 
 #include<bits/stdc++.h>
 using namespace std;
