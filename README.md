@@ -16,6 +16,7 @@ Stay in touch!!! 🤗
 Learned DSA in this order ⬇  
 - [Time Complexity](https://www.geeksforgeeks.org/understanding-time-complexity-simple-examples/)
 - [Recursion](https://github.com/1622vishal/Data-Structures-and-Algorithms/tree/master/Recursion)
+- [Linked Lists](https://github.com/1622vishal/Data-Structures-and-Algorithms/tree/master/LinkedLists)
  
 ## 🔗 Connect with me (●'◡'●) 
 
