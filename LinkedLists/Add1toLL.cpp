@@ -37,65 +37,38 @@ Node* AtoLL(vector<int> arr)
     return Head;
 }
 
-Node* reverse(Node* Head)
-{
-    if(Head == NULL || Head->next == NULL)
-        return Head;
-    Node* temp = Head;
-    Node* behind = NULL;
-    Node* front = Head->next;
-    while(temp)
-    {
-        temp->next = behind;
-        behind = temp;
-        temp = front;
-        if(front) front = front->next;
-    }
-    return behind;
-}
-
-Node* add1(Node* Head)
+int add1(Node* Head)
 {
     if(Head == NULL)
     {
-        Node* newnode = new Node(1);
-        return newnode;
+        return 1;
     }
-        
-    int num = 1;
-    int carry = 0;
-    Node* newHead = reverse(Head);
-    Node* temp = newHead;
-    int curdata = temp->data;
-    temp->data = (curdata + carry + num)%10;
-    carry = (curdata + carry + num)/10;
-    temp = temp->next;
-    Node* lastcarry;
-    while(temp)
+    int carry = add1(Head->next);
+    if((Head->data + carry)<10)
     {
-        if(!carry)
-            break;
-        curdata = temp->data;
-        temp->data = (curdata + carry)%10;
-        carry = (curdata + carry)/10;
-        lastcarry = temp;
-        temp = temp->next;
+        Head->data = Head->data + carry;
+        return 0;
     }
-    newHead = reverse(newHead);
-    if(carry)
+    Head->data = 0;
+    return 1;
+}
+
+Node* carryadder(Node* Head)
+{
+    if(add1(Head))
     {
-        Node* carrynode = new Node(1, newHead);
-        newHead = carrynode;
+        Node* newHead = new Node(1 , Head);
+        return newHead;
     }
-    return newHead;
+    return Head;
 }
 
 int main()
 {
-    vector<int> arr = {1};
+    vector<int> arr = {1,4,9};
     Node* head = AtoLL(arr);
     
-    head = add1(head);
+    head = carryadder(head);
     Node* temp = head;
     while(temp)
     {
