@@ -49,6 +49,21 @@ Node* reverse(Node* Head)
     return behind;
 }
 
+//Recursive Solution
+/*************************************************************************************************************************
+Node* reverseLL(Node* Head)
+{
+    if(Head == NULL || Head->next == NULL)
+        return Head;
+    
+    Node* newHead = reverse(Head->next);
+    Node* front = Head->next;
+    front->next = Head;
+    Head->next = NULL;
+    return newHead;
+}
+*************************************************************************************************************************/
+
 int main()
 {
     vector<int> arr = {99, 54, 67, 32};
