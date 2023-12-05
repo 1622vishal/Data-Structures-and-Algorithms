@@ -14,7 +14,7 @@ class Node{
     Node(int data1)
     {
         data = data1;
-        Node* next = nullptr;
+        next = nullptr;
     }
 };
 
