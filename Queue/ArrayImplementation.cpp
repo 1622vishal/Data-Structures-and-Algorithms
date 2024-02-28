@@ -30,7 +30,7 @@ class Queue
     void enqueue(int data)          //enqueue means push
     {
         //Overflow
-        if(rear == size-1) cout<<"Queue OverFlow"<<endl;
+        if(rear == size) cout<<"Queue OverFlow"<<endl;
         arr[rear] = data;
         rear++;
     }
